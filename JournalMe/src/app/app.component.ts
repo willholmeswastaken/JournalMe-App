@@ -11,12 +11,6 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit {
   title = 'app';
 
-  public isLoggedIn: Observable<boolean>;
-
-  constructor(private userService: UserService){
-    this.isLoggedIn = this.userService.isLoggedIn();
-  }
-
   ngOnInit(): void{
 
   }
