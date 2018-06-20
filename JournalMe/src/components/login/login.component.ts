@@ -11,7 +11,7 @@ import {
 })
  
  
-export class LogInComponent implements OnInit {
+export class LogInComponent implements OnInit { 
 
     ngOnInit(): void {
         

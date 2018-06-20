@@ -11,6 +11,12 @@ import {
 
 import { AppComponent } from './app.component';
 import { LogInComponent } from '../components/login/login.component';
+import { appRouting } from './app.routing';
+import { LandingComponent } from '../components/landing/landing.component';
+import { UserService } from '../services/user.service';
+import { DashboardComponent } from '../components/dashboard/dashboard.component';
+import { NavComponent } from '../components/nav/nav.component';
+import { AuthGuard } from '../guards/auth.guard';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -28,29 +34,26 @@ export function getAuthServiceConfigs() {
   return config;
 }
 
-const appRoutes: Routes = [
-  { path: 'login', component: LogInComponent }
-  //{ path: '**', component: PageNotFoundComponent }
-];
-
 @NgModule({
   declarations: [
     AppComponent,
-    LogInComponent
+    LogInComponent,
+    LandingComponent,
+    DashboardComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     SocialLoginModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
+    appRouting
   ],
   providers: [
     {
       provide: AuthServiceConfig,
       useFactory: getAuthServiceConfigs
-    }
+    },
+    UserService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

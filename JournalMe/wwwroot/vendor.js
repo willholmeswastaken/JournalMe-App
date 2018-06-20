@@ -30235,6 +30235,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/rxjs-compat/_esm5/add/observable/of.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/rxjs-compat/_esm5/add/observable/of.js ***!
+  \*************************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
+rxjs__WEBPACK_IMPORTED_MODULE_0__["Observable"].of = rxjs__WEBPACK_IMPORTED_MODULE_0__["of"];
+//# sourceMappingURL=of.js.map
+
+/***/ }),
+
 /***/ "./node_modules/rxjs/_esm5/index.js":
 /*!******************************************!*\
   !*** ./node_modules/rxjs/_esm5/index.js ***!
